@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ h1,
+ .highlight {
+    color: red;
+ }
+/*{
+    font-size: 20px;
+}*/
+.prima{
+    border: solid 4px;
+}
+.prima.seconda {
+ color:  red;
+}
+
+p::first-line{
+    font-size: 120%;
+    font-weight: bold;
+}
+.box::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    border: 2px solid black;
+}
+.box p {
+    color: blue;
+}
+.box > p{
+    color: green;
+}
+h3 + p {
+background-color: black;
+color: white;
+padding: .5em;
+}
+h3 ~ p {
+    background-color: rebeccapurple;
+}
+</style>
+
+<!--c'è il selettore universale che va a dare a tutti la stessa regola (* questo 
+    è il selettore *)-->
+<!--puoi ancare fare la lista delle classi singole o metterle tutti insieme-->
+<!--non lo metto nell esempio ma ricordati che puoi fare (#id) "selettore id"-->
+<!--ci sono i selettori di attributo ricorcati come vengono scritti
+    - a[title] {...} (dove sta la parola title)
+    - a[href="prova.html"]{...} (ad un link)
+    - a[special]{...} (qualsiasi attributo o classe che sta scritto special ma non deve essere in una parola)
+    - a[box-]{...} (qualsiasi parola che inizia con box- e poi continua)
+    - a[-box]{...} (qualsiasi parola che finisce con la parola -box)
+    - a[box]{...} (qualsiasi parola che  contiene la parte box)
+    -->
+<!-- - a:hover serve che quando ci passi ocn il mouse cambia colore-->
+<!-- lo pseudo elemento cioè che non l hai messo nel body pero lui lo capisce lo stesso o lo vai ad aggiungere dopo:
+      -a::first-line{...}-->
+<!-- in un paragrafo e come se ci fosse un after ed un before. con una classe
+    e mettendoci before e poi il content abbiamo a creare una regola;quindi caratteri ecc, prima
+    del paragrafo vedi esempio sopra.-->
+<!-- combinatori: discendant/child/sibling
+    -->
+
+
+</head>
+<body>
+    <!--i selettore è quello che metti prima della parentesi esempio"h1"-->
+<!--puoi mettere i selettori in lista per dare la stessa colorazione tutti insieme
+    o anche a tutti quelli che hanno la class "highlight"-->
+    <h1>sono un titolo</h1>
+
+    <a>sono un paragrafo</a><hr>
+
+    <span class="highlight">sono un span</span><hr>
+
+    <a class="prima">la prima classe prova</a><hr>
+    <span class="prima seconda">la seconda classe prova</span><hr>
+
+    
+    <div class="box">
+        <p>Roma è la capitale d'Italia. Inoltre è capoluogo dell'omonima città metropolitana e della regione Lazio. Il comune di Roma è dotato di un ordinamento amministrativo speciale, denominato Roma Capitale e disciplinato dalla legge dello Stato.[7]
+        Contando 2 745 819 abitanti, è il comune più popoloso d'Italia e il terzo dell'Unione europea dopo Berlino e Madrid, mentre, con una superficie di 1287,36 km², è il comune più esteso d'Italia e dell'Unione europea, nonché la quinta città più estesa d'Europa dopo Mosca, Istanbul, Londra e San Pietroburgo. È inoltre il comune europeo con la maggiore superficie di aree verdi.[8]
+        Secondo la tradizione, Roma sarebbe stata fondata il 21 aprile 753 a.C. da Romolo; nel corso dei suoi tre millenni di storia, è stata la prima metropoli dell'Occidente,[11] cuore pulsante di una delle più importanti civiltà antiche, che influenzò la società, la cultura, la lingua, la letteratura, l'arte, l'architettura, l'urbanistica, l'ingegneria civile, la filosofia, la religione, il diritto e i costumi dei secoli successivi. Luogo di origine della lingua latina, fu capitale dell'antico Stato romano, che estendeva il suo dominio su tutto il bacino del Mediterraneo e gran parte dell'Europa; poi dello Stato Pontificio, sottoposto al potere temporale dei papi; quindi del Regno d'Italia dal 1871 al 1946, poi della Repubblica Italiana. Per antonomasia è definita l'Urbe, Caput mundi e Città eterna.
+        Cuore della cristianità cattolica, è l'unica città al mondo ad ospitare al proprio interno un intero Stato, l'enclave della Città del Vaticano[12], cui si aggiunge la sede del Sovrano Militare Ordine di Malta, persona giuridica di diritto internazionale. Il suo centro storico, delimitato dal perimetro delle Mura aureliane, sovrapposizione di testimonianze di quasi tre millenni, è espressione del patrimonio storico, artistico e culturale del mondo occidentale europeo, tanto che, nel 1980, insieme alle proprietà extraterritoriali della Santa Sede nella città, è stato inserito nella lista dei patrimoni dell'umanità dell'UNESCO, provvedimento esteso nel 1990 ai territori compresi all'interno delle Mura gianicolensi.[16] Nel 2007 il Colosseo, simbolo della città, è stato inserito tra le nuove sette meraviglie del mondo.
+        Luogo di fondazione della Comunità economica europea e dell'Euratom,[18] ospita anche le sedi di tre organizzazioni delle Nazioni Unite: la FAO, il Fondo internazionale per lo sviluppo agricolo e il Programma alimentare mondiale (PAM). Nel 1960 ha ospitato i Giochi Olimpici.
+        Per tutte queste caratteristiche, Roma rientra nel novero delle città globali, precisamente nella categoria Beta</p>
+    </div>
+    <div>
+    <p>secondo paragrafo</p>
+    </div>   
+    <h3>ultimo esempio</h3>
+    <p>ciao</p>
+    <p>ciao</p>  
+    <p>ciao</p>
+
+</body>
+</html>
